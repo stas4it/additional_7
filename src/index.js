@@ -2,7 +2,7 @@ module.exports = function solveSudoku(matrix) {
   let m=matrix;
   
   function solve(matrix) {
-    var i, j, b, k;
+    let i, j, b, k;
     for (i = 0; i <= 8; i++) {
       for (j = 0; j <= 8; j++) {
         if (!matrix[i][j]) {
@@ -22,7 +22,7 @@ module.exports = function solveSudoku(matrix) {
   }
 
   function insert(matrix, i, j, k) {
-    var a, b;
+    let a, b;
     for (a = 0; a <= 8; a++) {
       if (a != i && matrix[a][j] == k) {
         return false;
@@ -33,7 +33,7 @@ module.exports = function solveSudoku(matrix) {
         return false;
       }
     }
-    var y = Math.floor((i / 3)) * 3,
+    let y = Math.floor((i / 3)) * 3,
         x = Math.floor((j / 3)) * 3;
     for (a = 0; a < 3; a++) {
       for (b = 0; b < 3; b++) {
